@@ -11,7 +11,7 @@ import UIKit
 class HistoricViewCell: UITableViewCell {
     
     static var identifier = "historicViewCell"
-    var dbHelper = Helper()
+    var helper = Helper()
         
     private lazy var nameLabel: UILabel = {
         let label = UILabel()
@@ -102,7 +102,7 @@ class HistoricViewCell: UITableViewCell {
         nameLabel.text = model.Nome
         valorLabel.text = String("R$\(model.Valor)")
         valorObjetivoLabel.text = String("R$\(model.ValorObjetivo)")
-        dataConcluidoLabel.text = dbHelper.DateToString(dateParametter: model.DataFinalizado)
+        dataConcluidoLabel.text = helper.DateToString(dateParametter: model.DataFinalizado)
     }
     
     func setLayout() {
